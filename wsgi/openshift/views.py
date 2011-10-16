@@ -5,5 +5,6 @@ def home(request):
     return render_to_response('home/home.html')
 
 def dept_start(request):
-   pass
+   return render_to_response('home/dept_start.xml', mimetype='text/xml')
+
 
