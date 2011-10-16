@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.0">
+
+   <form id="MainMenu">
+      <field name="DeptName">
+         Hi! What is your department?
+
+         <!--the grammar -->
+         <grammar type="text/gsl">
+            <![CDATA[
+               [
+                  (c s e)
+                  (e c e)
+                  (e i e)
+                  (a e i e)
+                  (i t)
+                  (b m e)
+                  (e e)
+               ]
+            ]]>
+         </grammar>
+
+         <!--silence-->
+         <noinput>
+            You were silent. Try again.
+            <reprompt />
+         </noinput>
+
+         <!--bogus department-->
+         <nomatch>
+            We don't have that department at N S E C. Try again.
+            <reprompt />
+         </nomatch>
+
+      </field>
+
+      <filled namelist="DeptName">
+         <if cond="DeptName == 'c s e'" >
+            <prompt>You rule!!</prompt>
+         <elseif cond="DeptName == 'e c e'" />
+            <prompt>Sourav Dey built a mobile phone, I heard!</prompt>
+         <elseif cond="DeptName == 'e i e'" />
+            <prompt>No, you won't get a job at Texas Instruments.</prompt>
+         <elseif cond="DeptName == 'a e i e'" />
+            <prompt>No, you won't get a job at Texas Instruments.</prompt>
+         <elseif cond="DeptName == 'i t'" />
+            <prompt>C S, I T bhai bhai.</prompt>
+         <elseif cond="DeptName == 'b m e'" />
+            <prompt>What was your J E E rank again?</prompt>
+         <elseif cond="DeptName == 'e e'" />
+            <prompt>You're brave, son! I bet you interned with Indian Railways.</prompt>
+         <else />
+            <prompt>
+               Uh huh
+            </prompt>
+         </if>
+      </filled>
+   </form>
+</vxml>
+
