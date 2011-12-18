@@ -3,7 +3,7 @@
 
    <form id="MainMenu">
       <field name="DeptName">
-         Hi! What is your department?
+         Hi! What's your department?
 
          <!--the grammar -->
          <grammar type="text/gsl">
@@ -48,7 +48,7 @@
          <elseif cond="DeptName == 'b m e'" />
             <prompt>What was your J E E rank again?</prompt>
          <elseif cond="DeptName == 'e e'" />
-            <prompt>You're brave, son! I bet you interned with Indian Railways.</prompt>
+            <prompt>You're brave! I bet you interned with Indian Railways.</prompt>
          <else />
             <prompt>
                Uh huh
